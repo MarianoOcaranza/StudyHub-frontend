@@ -44,6 +44,7 @@ main {
 .secondary-header button:hover {
     background-color: #333
 }
+
 .my-courses p {
     color: #333
 }
@@ -88,7 +89,7 @@ main {
     max-width: 100%;
 }
 .course-controllers img{
-    background-color: #222222;
+    background-color: #6e6e6e;
     color: white;
     font-family: 'Inter', sans-serif;
     padding: 5px 5px 5px 5px;
@@ -97,7 +98,7 @@ main {
     transition: background-color 0.3s;
 }
 .course-controllers img:hover{
-    background-color: black;
+    background-color: rgb(92, 92, 92);
 }
 .course-buttons {
     display: flex;

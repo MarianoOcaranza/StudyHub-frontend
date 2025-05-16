@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.json());
 
-app.use('/assets', express.static('./assets'));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.use(express.static(path.join(__dirname)));
 

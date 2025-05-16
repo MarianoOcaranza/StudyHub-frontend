@@ -1,4 +1,4 @@
-document.getElementById("register-form").addEventListener("submit", function(event) {
+/*document.getElementById("register-form").addEventListener("submit", function(event) {
 
     event.preventDefault();
 
@@ -54,3 +54,4 @@ function sendRegisterRequest(username, password,email, name, lastname){
         }
     )
 }
+*/

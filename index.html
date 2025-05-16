@@ -23,14 +23,13 @@
         <div class="nav-center" id="nav-center">
             <nav>
                 <a id='menu-option' href="#caracteristicas">Caracteristicas</a>
-                <a id='menu-option' href="">Como funciona</a>
-                <a id='menu-option' href="">Referencias</a>
+                <a id='menu-option' href="/how-it-works">Como funciona</a>
             </nav>
         </div>
         <div class="nav-actions">
-            <nav>
-                <a href="#auth">Iniciar sesion</a>
-               <a href="#auth"><button type="button">Registrarse</button></a>
+            <nav id="nav-actionsid">
+                <a href="#auth" class='boton1'>Iniciar sesion</a>
+                <a href="#auth" class='boton2'><button type="button">Registrarse</button></a>
             </nav>
         </div>
         <div class="burger-menu" id="burger">
@@ -38,14 +37,13 @@
         </div>    
     <!--Navbar movil-->
         <nav class="mobilenav" id="mobilenav">
-            <div class="nav-actions-mobile">
-                <a href="#auth" id='menu-option-mobile'>Iniciar sesion</a>
-                <a href="#auth"><button type="button">Registrarse</button></a>
+            <div class="nav-actions-mobile" id="nav-actionsid-mobile">
+                <a href="#auth" class='boton1' id='menu-option-mobile'>Iniciar sesion</a>
+                <a href="#auth" class='boton2'><button type="button">Registrarse</button></a>
               </div>
             <div class="nav-center-mobile" id="mobileMenu">
                 <a id='menu-option-mobile' href="#caracteristicas">Caracteristicas</a>
-                <a id='menu-option-mobile' href="">Como funciona</a>
-                <a id='menu-option-mobile' href="">Referencias</a>    
+                <a id='menu-option-mobile' href="/how-it-works">Como funciona</a>
             </div> 
         </nav>
       </header>
@@ -138,8 +136,10 @@
         </div>
       </div>
 </body>
+<script src="api/checkAuth.js"></script>
 <script src="assets/js/nav.js"></script>
 <script src="assets/js/register.js"></script>
 <script src="assets/js/login.js"></script>
 <script src="assets/js/auth.js"></script>
+<script src="api/authScript.js"></script>
 </html>
