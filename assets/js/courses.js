@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
                         <p>0 temas</p>
                     </div>
                     <div class="course-controllers">
-                        <img src="./assets/img/delete.svg" class="delete-btn" id='delete' alt="">
-                        <img src="./assets/img/edit.svg" class="edit-btn" id="edit" alt="">
+                        <img src="/assets/img/delete.svg" class="delete-btn" id='delete' alt="">
+                        <img src="/assets/img/edit.svg" class="edit-btn" id="edit" alt="">
                     </div>
                 </div>
                 <hr>
