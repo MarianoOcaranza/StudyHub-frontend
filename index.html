@@ -27,8 +27,8 @@
       </div>
       <div class="nav-actions">
         <nav id="nav-actionsid">
-          <a href="/#auth" class='boton1'>Iniciar sesion</a>
-          <a href="/#auth" class='boton2'><button class="regbut" type="button">Registrarse</button></a>
+          <a href="/#auth">Iniciar sesion</a>
+          <a href="/#auth"><button class="regbut" type="button">Registrarse</button></a>
         </nav>
       </div>
       <div class="burger-menu" id="burger">
@@ -36,8 +36,8 @@
       </div>    
       <nav class="mobilenav" id="mobilenav">
         <div class="nav-actions-mobile" id="nav-actionsid-mobile">
-          <a href="/#auth" class='boton1' id='menu-option-mobile'>Iniciar sesion</a>
-          <a href="/#auth" class='boton2'><button class='regbut' type="button">Registrarse</button></a>
+          <a href="/#auth" id='menu-option-mobile'>Iniciar sesion</a>
+          <a href="/#auth"><button class='regbut' type="button">Registrarse</button></a>
         </div>
         <div class="nav-center-mobile" id="mobileMenu">
           <a id='menu-option-mobile' href="#caracteristicas">Caracteristicas</a>
@@ -49,8 +49,8 @@
         <div class="content-main">
             <h1>Preparate para tus examenes de manera inteligente</h1>
             <p>Sube tus materias y bibliografia para generar examenes personalizados para practicar y dominar tus estudios</p>
-            <a href="#auth"><button class="comenzar" type="button">Comenzar ahora</button></a>
-            <button class="conocer" type="button">Conocer mas</button>
+            <button class="comenzar" onclick="window.location.href = '/#auth'" id="comenzar" type="button">Comenzar ahora</button>
+            <button class="conocer" onclick="window.location.href = '/how-it-works'" type="button">Conocer mas</button>
         </div>
         <div class="imagen-principal">
             <img class="imagen-study" src="assets/img/study.jpg" alt="Imagend de un multiple choice">
@@ -92,6 +92,8 @@
         <div class="auth-container">
           <div class="auth-box login-box active" id="login-box">
             <h2>Iniciar Sesión</h2>
+             <div id="login-msgs">
+            </div>
             <form id="login-form">
               <div class="input-group">
                 <label for="username">Usuario</label>
@@ -109,6 +111,8 @@
       
           <div class="auth-box register-box" id="register-box">
             <h2>Registrarse</h2>
+            <div id="reg-msgs">
+            </div>
             <form id="register-form">
               <div class="input-group">
                 <label for="email">Email</label>

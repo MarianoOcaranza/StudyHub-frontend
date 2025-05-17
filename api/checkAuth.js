@@ -6,7 +6,7 @@ const checkAuth = async ()=> {
         },
         credentials: 'include'
     })
-    if (response.status == 200) {
+    if (response.status === 200) {
         document.getElementById('nav-actionsid').innerHTML = `
             <a class='perfil'>
                 <img src="./assets/img/profile.svg" alt="profile">
@@ -29,6 +29,7 @@ const checkAuth = async ()=> {
         `
         if (window.location.pathname === '/') {
             document.getElementById('auth').style.display = 'none'
+            document.getElementById('comenzar').setAttribute('onclick', "window.location.href='/courses.html'")
         }
     }
 }
