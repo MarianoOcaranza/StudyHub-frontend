@@ -92,7 +92,7 @@ header .logo span {
     align-items: center;
     justify-content: center;
 }
-.nav-actions button {
+.regbut {
     background-color: black;
     color: white;
     padding: 10px 15px 10px 15px;
@@ -104,13 +104,34 @@ header .logo span {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.logoutbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logoutbut {
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 .nav-actions button a {
     color: white;
 }
 .nav-actions button a:visited {
     color: white;
 }
-button:hover {
+.regbut:hover {
     background-color: #333
 }
 a{

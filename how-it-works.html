@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/how-it-works.css">
-    
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
     <title>StudyHub</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/img/libro.png" alt="Logo de StudyHub">
-            <a href="/"><span>StudyHub</span></a>
-        
-        </div>
-
-        <div class="nav-center">
+    <header class="navbar" id="navbar"> 
+        <a class="logo" href="/">
+            <img src="./assets/img/logo.png" alt="logo-img">
+            <span>StudyHub</span>
+        </a>
+        <div class="nav-center" id="nav-center">
             <nav>
-                <a href="#caracteristicas">Caracteristicas</a>
-                <a href="/how-it-works">Como funciona</a>
-                <a href="/reference">Referencias</a>
+                <a id='menu-option' href="#caracteristicas">Caracteristicas</a>
+                <a id='menu-option' href="/how-it-works">Como funciona</a>
             </nav>
         </div>
-
         <div class="nav-actions">
-            <nav>
-                <a href="#login">Iniciar sesion</a>
-                <button class="register" type="button" onclick="window.location.href='/register'">Registrarse</button>
+            <nav id="nav-actionsid">
+                <a href="/#auth" class='boton1'>Iniciar sesion</a>
+                <a href="/#auth" class='boton2'><button class="regbut" type="button">Registrarse</button></a>
             </nav>
         </div>
-    </header>
+        <div class="burger-menu" id="burger">
+            <img id='open-menu' src="./assets/img/menu.svg" alt="open-menu">
+        </div>    
+        <nav class="mobilenav" id="mobilenav">
+            <div class="nav-actions-mobile" id="nav-actionsid-mobile">
+                <a href="/#auth" class='boton1' id='menu-option-mobile'>Iniciar sesion</a>
+                <a href="/#auth" class='boton2'><button class='regbut' type="button">Registrarse</button></a>
+            </div>
+            <div class="nav-center-mobile" id="mobileMenu">
+                <a id='menu-option-mobile' href="#caracteristicas">Caracteristicas</a>
+                <a id='menu-option-mobile' href="/how-it-works">Como funciona</a>
+            </div> 
+        </nav> 
+    </header>    
     <main class="main-container">
         <section class="head-container">
             <div class="section-container">
@@ -118,9 +127,9 @@
 
         </div>
     </section>
-
-
     </main>
 </body>
+<script src="assets/js/loadnav.js"></script>
+<script src="api/authScript.js"></script>
 <script src="api/checkAuth.js"></script>
 </html>
