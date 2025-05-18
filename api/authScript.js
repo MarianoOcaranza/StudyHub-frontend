@@ -29,7 +29,7 @@ if(window.location.pathname === '/'){
                     Login exitoso! cargando...
                 </ul>
                 `      
-                window.location.href = "/"
+                window.location.href = "/user/courses"
             } else if (data.message == 'Credenciales inválidas') {
                 document.getElementById('login-msgs').innerHTML = `
                 <ul style="color: red; padding-left: 20px;">

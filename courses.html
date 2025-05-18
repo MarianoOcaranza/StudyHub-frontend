@@ -12,56 +12,42 @@
     <title>StudyHub - Materias</title>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="/assets/img/logo.png" alt="logo-img">
-            <span>StudyHub</span>
-        </div>
-        <!--Navbar-->
-        <div class="nav-center" id="nav-center">
-            <nav>
-                <a id='menu-option' href="">Como funciona</a>
-                <a id='menu-option' href="">Referencias</a>
-            </nav>
-        </div>
-        <div class="nav-actions">
-            <nav>
-                <a href="#auth" id="action-button-wrapper">
-                    <img src="/assets/img/profile.svg" alt="profile">
-                    <p>Perfil</p>
-                </a>
-                <a href="/" id="action-button-wrapper">
-                    <img src="/assets/img/logout.svg" alt="logout">
-                    <button type="button" id="logout">Salir</button>
-                </a>
-            </nav>
-        </div>
-        <div class="burger-menu" id="burger">
-            <img id='open-menu' src="/assets/img/menu.svg" alt="open-menu">
-        </div>    
-    <!--Navbar movil-->
-        <nav class="mobilenav" id="mobilenav">
-            <div class="nav-actions-mobile">
-                <a href="#auth" id="action-button-wrapper">
-                    <img src="/assets/img/profile.svg" alt="profile">
-                    <p>Perfil</p>
-                </a>
-                <a href="/index.html" id="action-button-wrapper">
-                    <img src="/assets/img/logout.svg" alt="logout">
-                    <button type="button" id="logout">Salir</button>
-                </a>
-            </div>
-            <div class="nav-center-mobile" id="mobileMenu">
-                <a id='menu-option-mobile' href="">Como funciona</a>
-                <a id='menu-option-mobile' href="">Referencias</a>    
-            </div> 
+    <header class="navbar" id="navbar">
+      <a class="logo" href="/">
+        <img src="/assets/img/logo.png" alt="logo-img">
+        <span>StudyHub</span>
+      </a>
+      <div class="nav-center" id="nav-center">
+        <nav>
+          <a id='menu-option' class="caracteristicas-btn" href="#caracteristicas">Caracteristicas</a>
+          <a id='menu-option' href="/how-it-works">Como funciona</a>
         </nav>
+      </div>
+      <div class="nav-actions">
+        <nav id="nav-actionsid">
+          <a href="/#auth">Iniciar sesion</a>
+          <a href="/#auth"><button class="regbut" type="button">Registrarse</button></a>
+        </nav>
+      </div>
+      <div class="burger-menu" id="burger">
+        <img id='open-menu' src="/assets/img/menu.svg" alt="open-menu">
+      </div>    
+      <nav class="mobilenav" id="mobilenav">
+        <div class="nav-actions-mobile" id="nav-actionsid-mobile">
+          <a href="/#auth" id='menu-option-mobile'>Iniciar sesion</a>
+          <a href="/#auth"><button class='regbut' type="button">Registrarse</button></a>
+        </div>
+        <div class="nav-center-mobile" id="mobileMenu">
+          <a id='menu-option-mobile' class='caracteristicas-btn' href="#caracteristicas">Caracteristicas</a>
+          <a id='menu-option-mobile' href="/how-it-works">Como funciona</a>
+        </div> 
+      </nav>
     </header>
     <main>
         <article class="secondary-header">
             <div class="my-courses">
                 <h1>Mis cursos</h1>
-                <p>1 curso</p>
+                <p id="courses-counter">0 cursos</p>
             </div>
             <button id="new-course-button">
                 <img src="/assets/img/add.svg" alt="add">
@@ -69,31 +55,11 @@
             </button>
         </article>
         <article class="courses-container">
-            <div class="course">
-                <div class="course-header">
-                    <div>
-                        <h1>Titulo del curso</h1>
-                        <p>3 temas</p>
-                    </div>
-                    <div class="course-controllers">
-                        <img src="/assets/img/delete.svg" class="delete-btn" id='delete' alt="">
-                        <img src="/assets/img/edit.svg" class="edit-btn" id="edit" alt="">
-                    </div>
-                </div>
-                <hr>
-                <div class="course-content">
-                    <p>Bibliografia:</p>
-                    <p class="bibliografia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, necessitatibus!</p>  
-                </div>
-                <div class="course-buttons">
-                    <button>Generar examen</button>
-                    <button>Ver temas</button>
-                </div>
-            </div>
+            
         </article>
     </main>
     <div id="create-modal" class="modal hidden">
-        <div class="modal-content">
+        <form id='create-form' class="modal-content">
             <h2>Nuevo Curso</h2>
             <label>
                 <p>Título del curso:</p>
@@ -103,13 +69,12 @@
                 <p>Bibliografía:</p>
                 <input type="text" id="new-biblio" placeholder="Bibliografía">
             </label>
-            
-            <button id="create-course">Crear</button>
-            <button class="close-modal">Cancelar</button>
-        </div>
+            <button type='submit' id="create-course">Crear</button>
+            <button type='button' class="close-modal">Cancelar</button>
+        </form>
     </div>
     <div id="edit-modal" class="modal hidden">
-        <div class="modal-content">
+        <form class="modal-content" id="edit-form">
             <h2>Editar Curso</h2>
             <label>
                 <p>Título del curso:</p>
@@ -119,12 +84,14 @@
                 <p>Bibliografía:</p>
                 <input type="text" id="edit-biblio">
             </label>
-            <button id="save-edit">Guardar</button>
-            <button class="close-modal">Cancelar</button>
-        </div>
+            <button type='submit' id="save-edit">Guardar</button>
+            <button type='button' class="close-modal">Cancelar</button>
+        </form>
     </div>
 </body>
-<script src="api/checkAuth.js"></script>
-<script src="/assets/js/nav.js"></script>
+<script src="/api/loadCourses.js"></script>
+<script src="/api/coursesManagement.js"></script>
+<script src="/api/authScript.js"></script>
+<script src="/assets/js/loadnav.js"></script>
 <script src="/assets/js/courses.js"></script>
 </html>

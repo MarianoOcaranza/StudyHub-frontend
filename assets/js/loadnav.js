@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if (burger && mobileMenu && menuIcon) {
         burger.addEventListener('click', () => {
             if (mobileMenu.classList.contains('active')) {
-                menuIcon.src = './assets/img/menu.svg';
+                menuIcon.src = '/assets/img/menu.svg';
             } else {
-                menuIcon.src = './assets/img/close.svg';
+                menuIcon.src = '/assets/img/close.svg';
             }
                 mobileMenu.classList.toggle('active');
         });
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         options.forEach((option)=> {
             option.addEventListener('click', ()=>{
                 mobileMenu.classList.remove('active');
-                menuIcon.src = './assets/img/menu.svg'
+                menuIcon.src = '/assets/img/menu.svg'
             })
         })
 
@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 ()=> {
                     showLoginBox();
                     mobileMenu.classList.remove('active')
-                    menuIcon.src = './assets/img/menu.svg'
+                    menuIcon.src = '/assets/img/menu.svg'
                 });
             navactionsMobile[1].addEventListener('click',
                 ()=> {
                     showRegisterBox();
                     mobileMenu.classList.remove('active')
-                    menuIcon.src = './assets/img/menu.svg'
+                    menuIcon.src = '/assets/img/menu.svg'
                 });
             }
         else {
@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
             navactionsMobile[0].addEventListener('click', ()=> {
                 window.location.href = '/#auth'
                 mobileMenu.classList.remove('active')
-                menuIcon.src = './assets/img/menu.svg'
+                menuIcon.src = '/assets/img/menu.svg'
             });
             navactionsMobile[1].addEventListener('click', ()=> {
                 window.location.href = '/#auth'
                 mobileMenu.classList.remove('active')
-                menuIcon.src = './assets/img/menu.svg'
+                menuIcon.src = '/assets/img/menu.svg'
             });
         }
     }  
